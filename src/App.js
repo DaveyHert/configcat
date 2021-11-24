@@ -3,9 +3,11 @@ import { useState } from "react";
 import { useConfigCat } from "./useConfigCat";
 
 function App() {
-  const [status, setStatus] = useState(null);
+  const [message, setMessage] = useState(null);
   const [birthYear, setBirthYear] = useState("");
   const [age, setAge] = useState("");
+
+  // use custom Config Hook
   const { getUserAgeFeature, userAgeFeature, error } = useConfigCat();
 
   // Calcage Feature
@@ -18,7 +20,7 @@ function App() {
   // Get feature status from ConfigCat
   const checkStatus = () => {
     getUserAgeFeature();
-    setStatus(true);
+    setMessage(true);
   };
 
   return (
@@ -26,7 +28,7 @@ function App() {
       <button className='btn' onClick={checkStatus}>
         Get Age Calculator Feature
       </button>
-      {status && !userAgeFeature && (
+      {!userAgeFeature && message && (
         <p>Sorry, This feature has been disabled by the Admin</p>
       )}
 
