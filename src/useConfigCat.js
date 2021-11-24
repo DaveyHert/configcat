@@ -18,7 +18,6 @@ export const useConfigCat = () => {
         "getUserAgeFeature",
         false
       );
-      console.log(res);
       setUserAgeFeature(res);
     } catch (err) {
       setError(err.message);
