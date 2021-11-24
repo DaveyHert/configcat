@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# Application's Functionality:
+
+On loading the app, you are provided a button that asks if you want to calculate your age. When clicked, it sends a status request to configCat for that feature.
+If the getUserAgeFeature flag is toggled on the feature is enabled for use and an input field appears for a user to calculate their age based on birth year. 
+But if the feature flag is toggled off, a message is displayed telling the user that the feature is currently disabled by the admin.
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
