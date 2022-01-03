@@ -15,7 +15,7 @@ export const useConfigCat = () => {
   const getUserAgeFeature = async () => {
     try {
       const res = await configCatClient.getValueAsync(
-        "getUserAgeFeature",
+        "isMyFirstFeatureEnabled",
         false
       );
       setUserAgeFeature(res);

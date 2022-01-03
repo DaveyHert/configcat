@@ -26,7 +26,7 @@ function App() {
   return (
     <div className='App'>
       <button className='btn' onClick={checkStatus}>
-        Get Age Calculator Feature
+        Calculator Age
       </button>
       {!userAgeFeature && message && (
         <p>Sorry, This feature has been disabled by the Admin</p>
@@ -41,7 +41,7 @@ function App() {
             onChange={(e) => setBirthYear(e.target.value)}
           />
           <button className='btn' onClick={calcAge}>
-            Get Age
+            Calculate
           </button>
 
           {age && <p>You are {age} yeays old🥳</p>}
